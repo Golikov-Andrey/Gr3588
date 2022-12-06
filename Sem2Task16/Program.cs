@@ -28,14 +28,34 @@
 // }
 
 
-void TestSQRT(int i, int j)
-{
-    bool result = (i/j==j);
-    if(result==true)Console.WriteLine(" Число "+i+" является квадратом числа "+j);
-    else Console.WriteLine(" Число "+i+" не является квадратом числа "+j);
-}
+// void TestSQRT(int i, int j)
+// {
+//     bool result = (i/j==j);
+//     if(result==true)Console.WriteLine(" Число "+i+" является квадратом числа "+j);
+//     else Console.WriteLine(" Число "+i+" не является квадратом числа "+j);
+// }
 
-int number1 = int.Parse(Console.ReadLine()??"0");
-int number2 = int.Parse(Console.ReadLine()??"0");
-TestSQRT(number1,number2);
-TestSQRT(number2,number1);
+// int number1 = int.Parse(Console.ReadLine()??"0");
+// int number2 = int.Parse(Console.ReadLine()??"0");
+// TestSQRT(number1,number2);
+// TestSQRT(number2,number1);
+ 
+ //Вводим число
+int number = int.Parse(Console.ReadLine() ?? "0");
+
+
+//Вводим условие
+if (number > 99)
+{
+    //Превращаем число в массив
+    Char[] digits = number.ToString().ToCharArray();
+
+    //Выводим в консоле результат
+    Console.WriteLine(digits[2]);
+}
+else
+{
+    //Выводим в консоле, что в числе нет третьей цифры
+    Console.WriteLine("в числе нет третьей цифры");
+
+}

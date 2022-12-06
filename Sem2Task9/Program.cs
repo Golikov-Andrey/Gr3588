@@ -4,9 +4,9 @@
 
 // //Вариант 1
 // //Получаем новое случайное число
- int randomNumber = numberSintezator.Next(10,100);
+// int randomNumber = numberSintezator.Next(10,100);
 // // Выводим данные в консоль 
- Console.WriteLine(randomNumber);
+// Console.WriteLine(randomNumber);
 // //Получаем первое и второе число поотдельности
 // int firstNumber = number/10; //72 72/10=7,2
 // int secondNumber = number%10;//72 72%10=2
@@ -22,16 +22,16 @@
 //   // Console.WriteLine(secondNumber);
 // }
 
-// //Вариант 2
-// char[] digits = numberSintezator.Next(10,100).ToString().ToCharArray();
-// //Console.WriteLine(digits);
+//Вариант 2
+char[] digits = numberSintezator.Next(10,100).ToString().ToCharArray();
+Console.WriteLine(digits);
 
-// firstNumber = ((int)digits[0])-48;
-// secondNumber = ((int)digits[1])-48;
+int firstNumber = ((int)digits[0])-48;
+int secondNumber = ((int)digits[1])-48;
 
-// int resultNumber = firstNumber>secondNumber?resultNumber=firstNumber:resultNumber=secondNumber;
+int resultNumber = firstNumber>secondNumber?resultNumber=firstNumber:resultNumber=secondNumber;
 
-// //Console.WriteLine(resultNumber);
+Console.WriteLine(resultNumber);
 
 // //Вариант 3
 // int[] indxAnsw = new int[90];
@@ -48,13 +48,13 @@
 // // Выводим данные в консоль 
 // Console.WriteLine(indxAnsw[number-10]);
 
-int max = 0; 
+// int max = 0; 
 
-while (randomNumber > 0) {
-    if (max < randomNumber%10) {
-        max = randomNumber%10;
-    }
-    randomNumber =  randomNumber/10;
-}
+// while (randomNumber > 0) {
+//     if (max < randomNumber%10) {
+//         max = randomNumber%10;
+//     }
+//     randomNumber =  randomNumber/10;
+// }
 
-Console.WriteLine(max);
+// Console.WriteLine(max);
